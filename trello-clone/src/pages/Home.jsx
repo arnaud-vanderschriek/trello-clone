@@ -1,13 +1,15 @@
 import { useState } from "react";
 import { DndContext } from "@dnd-kit/core";
-import Draggable from "../components/Draggable";
-import Droppable from "../components/Droppable";
+import Draggable from "../components/Card";
+import Droppable from "../components/Column";
 
 function Home() {
   const [board, setBoard] = useState({
     todo: [{ id: "1", content: "Apprendre React" }],
-    doing: [{ id: "2", content: "Coder drag&drop" }],
-    done: [{ id: "3", content: "Installer @dnd-kit" }],
+    progress: [{ id: "2", content: "Coder drag&drop" }],
+    qa: [{ id: "3", content: "Test 3" }],
+    cr: [{ id: "4", content: "Test 4" }],
+    done: [{ id: "5", content: "Installer @dnd-kit" }],
   });
 
   function handleDragEnd(event) {
@@ -31,7 +33,7 @@ function Home() {
   }
 
   return (
-    <main>
+    <main className="p-4 mt-20">
       <h1 className="text-4xl font-bold mb-6">Welcome to Trello-clone</h1>
       <DndContext onDragEnd={handleDragEnd}>
         <section className="flex gap-6">
@@ -44,9 +46,27 @@ function Home() {
             ))}
           </Droppable>
 
-          <Droppable id="doing">
-            <h2 className="font-semibold mb-2">⚡ Doing</h2>
-            {board.doing.map((task) => (
+          <Droppable id="progress">
+            <h2 className="font-semibold mb-2">⚡ in progress</h2>
+            {board.progress.map((task) => (
+              <Draggable key={task.id} id={task.id}>
+                {task.content}
+              </Draggable>
+            ))}
+          </Droppable>
+
+          <Droppable id="qa">
+            <h2 className="font-semibold mb-2">✅ QA</h2>
+            {board.qa.map((task) => (
+              <Draggable key={task.id} id={task.id}>
+                {task.content}
+              </Draggable>
+            ))}
+          </Droppable>
+
+          <Droppable id="cr">
+            <h2 className="font-semibold mb-2">✅ Code Review</h2>
+            {board.cr.map((task) => (
               <Draggable key={task.id} id={task.id}>
                 {task.content}
               </Draggable>

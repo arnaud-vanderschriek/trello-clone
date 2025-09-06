@@ -5,7 +5,8 @@ function Droppable({ id, children }) {
 
   const style = {
     backgroundColor: isOver ? "lightgreen" : "#f3f3f3",
-    minHeight: "200px",
+    minHeight: "600px",
+    width: "300px"
   };
 
   return (

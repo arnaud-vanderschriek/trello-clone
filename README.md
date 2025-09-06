@@ -2,9 +2,9 @@
 
 Un clone simplifié de **Trello** construit avec **React** et **@dnd-kit**, permettant de gérer des projets avec un système de colonnes et de cartes en drag & drop.  
 
-![Aperçu de l'application](./landing1.png)
-![Aperçu de l'application](./landing2.png)
-![Aperçu de l'application](./landing1.png)
+![Aperçu de l'application](./src/assets/landing1.png)
+![Aperçu de l'application](./src/assets/landing2.png)
+![Aperçu de l'application](./src/assets/board.png)
 
 ## ✨ Fonctionnalités  
 

@@ -1,12 +1,66 @@
-# React + Vite
+# 📌 Trello-Clone  
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Un clone simplifié de **Trello** construit avec **React** et **@dnd-kit**, permettant de gérer des projets avec un système de colonnes et de cartes en drag & drop.  
 
-Currently, two official plugins are available:
+![Aperçu de l'application](./landing1.png)
+![Aperçu de l'application](./landing2.png)
+![Aperçu de l'application](./landing1.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Fonctionnalités  
 
-## Expanding the ESLint configuration
+- 📋 Création de colonnes de type *To Do*, *In Progress*, *Code Review*, *QA*, *Done*  
+- 🎯 Déplacement des cartes par **drag & drop** (powered by `@dnd-kit`)  
+- 💡 Interface simple, rapide et intuitive  
+- 🎨 UI moderne avec **Tailwind CSS**  
+- 🔥 Architecture claire et extensible  
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🚀 Démo  
+
+👉 [Visiter mon Trello-Clone](https://trello-clone-azure-alpha.vercel.app/)
+
+
+---
+
+## 🛠️ Stack technique  
+
+- ⚛️ **React** – framework front-end  
+- 🎨 **Tailwind CSS** – pour le style rapide et moderne  
+- 🖱️ **@dnd-kit/core** – pour le système de drag & drop  
+- 🌐 **React Router** – pour la navigation (Landing page → Board)  
+
+---
+
+## 📂 Structure du projet  
+
+```bash
+src/
+ ├── components/
+ │   ├── Card.jsx        # Composant pour une carte
+ │   ├── Column.jsx      # Composant pour une colonne
+ │   └── Navbar.jsx      # Barre de navigation
+ ├── pages/
+ │   ├── LandingPage.jsx # Page d’accueil
+ │   └── Home.jsx        # Page principale du board
+ ├── App.jsx             # Routing principal
+ └── main.jsx            # Entrée de l’app
+
+ ```
+
+## ⚡ Installation & lancement
+Clone le projet et installe les dépendances :
+
+```bash
+
+# Clone le repo
+git clone https://github.com/ton-compte/trello-clone.git
+
+# Va dans le dossier
+cd trello-clone
+
+# Installe les dépendances
+npm install
+
+# Lance l’app
+npm run dev

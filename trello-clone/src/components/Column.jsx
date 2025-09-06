@@ -3,6 +3,7 @@ import { useDroppable } from "@dnd-kit/core";
 function Droppable({ id, children }) {
   const { isOver, setNodeRef } = useDroppable({ id });
 
+  // NOTE: test note
   const style = {
     backgroundColor: isOver ? "lightgreen" : "#f3f3f3",
     minHeight: "600px",
